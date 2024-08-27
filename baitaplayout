@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        {padding: 0px; margin 0px auto}
+        .wrapper{
+            height: 860px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+    nav{ 
+        height: 60px;
+        width: 1089px;
+        background-color: rgb(251, 220, 208, 0.861);
+    }
+    header{
+        height: 150px;
+        width: 1089px;
+        background-color: rgb(127, 97, 97);
+    }
+    .content{
+        height: 500px;
+        width: 1089px;
+        background-color: rgb(166, 227, 241);
+    }
+    footer{
+        height: 150px;
+        width: 1089px;
+        background-color: rgb(204, 252, 189);
+        float: left;
+
+    }
+    #menu-left{
+        height: 500px;
+        width: 30%;
+        background-color: rgb(255, 244, 159);
+    }
+    #menu-left{
+        height: 500px;
+        width: 35%;
+        background-color: rgb(145, 243, 252);
+        float:left;
+    }
+    .content-left{
+        height: 500px;
+        width: 1089px;
+        background-color: rgb(128, 185, 191);
+    }
+    .content-right{
+        height: 500px;
+        width: 35%;
+        background-color: rgb(128, 185, 191);
+        float:left;
+    }
+    .menu li{
+        width: 200px;
+        height: 100%;
+        list-style: none;
+        float: left;
+        line-height: 60px;
+        background-color: antiquewhite;
+        text-align: center;
+    }
+    a{text-decoration: none;}
+    .menu li:hover{
+        background-color: cadetblue;
+    }
+    </style>
+</head> 
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li> <a href="http://"> Home </a> </li>
+                <li> <a href="http://"> Contact </a> </li>
+                <li> <a href="http://"> Services </a> </li>
+                <li> <a href="http://"> Help </a> </li>
+                <li> <a href="http://"> About </a> </li>
+            </ul>
+        </nav>
+        <header></header>
+        <div class="content">
+            <div id="menu-left"> </div>
+            <div class="content-left"> </div>
+            <div class="content-right"> </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
