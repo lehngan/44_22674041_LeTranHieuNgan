@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flower Box</title>
+    <style>
+        *{
+            padding:0px;
+            margin: 0 auto;
+        }
+        .wrapper{
+            width: 1000px;
+            height:730px;
+            border: 1px solid black;
+        }
+        header{
+            background-color: #2c4d7c;
+            width: 100%;
+            height: 130px;
+            position:relative;
+        }
+        header img{
+            width: auto;
+            height: 100px;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        header h1{
+            position: absolute;
+            top: 30px;
+            left: 100px;
+            color: white;
+        }
+        header p{
+            position: absolute;
+            top: 60px;
+            left: 100px;
+            color: white;
+            margin-top: 10px;
+        }
+        header #fr1{
+            position:absolute;
+            top: 10px;
+            right: 20px;
+        }
+        #fr1 input{
+            width: 190px;
+            height: 30px;
+            background-color: #0f3263;
+            color: white;
+            border: 1px solid #2770d6;
+            padding-left: 10px;
+        }
+        ::placeholder{
+            color: white;
+        }
+        #fr1 button{
+            width: 40px;
+            height: 30px;
+            background-color: #0f3263;
+            color: white;
+            cursor: pointer;
+            border: 1px solid #2770d6;
+        }
+        .menu{
+            position:absolute;
+            bottom: 7px;
+            right:20px;
+        }
+        .menu li{
+            display:inline-table;
+            background-color:#39629d;
+            color: white;
+            height: 45px;
+            line-height: 45px;
+            padding: 5px 10px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .menu li:hover{
+            background-color: #365d8a;
+            color:black;
+        }
+        .content{
+            width:100%;
+            display:flex;
+            height: 550px;
+        }
+        .col1{
+            width: 70%;
+        }
+        .name h2{
+            margin-left: 20px;
+            margin-top:20px;
+        }
+        .line{
+            border-bottom: dashed;
+            padding-top: 20px;
+            color:rgb(142, 141, 141);
+            width: 96%;
+            margin-right: 10px;
+        }
+        .section{
+            display:flex;
+        }
+        .cl{
+            width: 60%;
+            margin-left:20px;
+            text-align: justify;
+            margin-right: 40px;
+            margin-top: 20px;
+        }
+        .cl p{
+            color: red;
+            text-shadow: green 1px 5px 5px;
+            margin-bottom: 30px;
+        }
+        .fr-input{
+            display:flex;
+        }
+        .fr1{
+            width: 50%;
+        }
+        .fr-input input{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .fr2{
+            width: 50%;
+        }
+        textarea{
+            width: 98%;
+            height: 70px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .chon{
+            width: 50px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .cr{
+            width: 40%;
+            margin-top:20px;
+        }
+        .cr p{
+            margin-top: 15px;
+        }
+        .col2{
+            width: 30%;
+            background-color:rgb(244, 244, 244);
+            margin: 60px 20px 40px 20px;
+            height: 400px;
+        }
+        .col2 img{
+            width: 250px;
+            margin-top: 20px;
+            margin-left: 10px;
+            border-style: solid;
+            border-color: rgb(142, 141, 141);
+            border-width: 1.5px;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        .col2 p{
+            padding: 5px 10px;
+            text-align: justify;
+        }
+        .col2 a{
+            position:relative;
+            left: 180px;
+            margin-top: 60px;
+            text-decoration:none;
+            font-weight: bold;
+            color:#2c4d7c;
+        }
+        footer{
+            width:100%;
+            height: 50px;
+            background-color: #2c4d7c;
+        }
+        footer p{
+            font-size: 15px;
+            text-align: center;
+            color:white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="/BT_Tuan3/img/flower.png">
+            <h1> FlowerBox 360 </h1>
+            <p> ...to get your daily close of luxury roses! </p>
+            <form action="" method="get" id="fr1">
+                <input type="search" placeholder="Search the site...">
+                <button type="submit"> GO </button>
+            </form>
+            <div class="menu">
+                <ul>
+                    <li href="#"> Home </li>
+                    <li> Promotion </li>
+                    <li> Gift Baskets </li>
+                    <li> Flowers Services </li>
+                    <li> About </li>
+                </ul> 
+            </div>
+        </header>
+        <div class="content">
+            <div class="col1">
+                <div class="name">
+                    <h2> Why Not Contact Us Today! </h2>
+                    <div class="line"></div>
+                </div>
+                <div class="section">
+                    <div class="cl">
+                        <p> For FlowerBox 360 shopers, that means not only can you send your friends and loves ones the highest
+                            quality flowers found on online, but that you can do so at a great value.
+                        </p>
+                        <form action="#" method="post">
+                        <div class="fr-input">
+                                <div class="fr1">
+                                    <label for="name">Name:</label><br>
+                                    <input type="text" name="name" placeholder="Name"><br>
+                                    <label for="telephone">Telephone:</label><br>
+                                    <input type="tel" name="telephone" placeholder="Telephone"><br>
+                                </div>
+                                <div class="fr2">
+                                    <label for="email">Email:</label><br>
+                                    <input type="email" name="email" placeholder="Email"><br>
+                                    <label for="subject">Subject:</label><br>
+                                    <input type="text" name="subject" placeholder="Subject"><br>
+                                </div>
+                        </div>
+                    </form>
+                        <form action="" class="Mess">
+                            <label for="message">Message:</label><br>
+                            <textarea name="message"></textarea><br>
+                            <button type="submit" class="chon"> Submit </button>
+                            <button type="reset" class="chon"> Reset </button>
+                        </form>
+                    </div>
+                    <div class="cr">
+                        <h2> FlowerBox 360 Info! </h2>
+                        <div class="line"></div>
+                        <p>Openationg Hours: <br> Monday-Friday:9:000am-5:00pm <br> Saturday:9:00am-1.00pm. <br> Sunday:CLosed (No Deliveries)
+                            <br>ORDER ONLINE 24/7</p>
+                        <br><br>
+                        <p> Software Engineering Dept.<br> Information Technology Faculty<br> First Floor, H Building</p>
+                        <br> <br>
+                        <p>12 Nguyen Van Bao, Ward 4,<br> Go Vap District, Ho Chi Minh City<br> Tel: 0283.8940 390<br> Fax: 0283.9940 954</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col2">
+                <h2> Discount & Specials </h2>
+                <div class="line"></div>
+                <img src="/BT_Tuan3/img/rose.png">
+                <p> FlowerBox 360 offers many great discounts throught the year, from coupons and coupon codes, to promo codes and other savings. 
+                    We also offer military flower discounts to our wonderfull troppps! </p>
+                <a href="#"> Read more >> </a>
+            </div>
+        </div>
+        <footer> <p> Copyright 2017 - All Rights Reserved - Software Engineering Department - Industrial University of Ho Chi Minh City </p> </footer>
+    </div>
+</body>
+</html>

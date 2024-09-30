@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SKY WORLD </title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0px;
+        }
+       .wrapper {
+        width: 90%;
+        height: 735px;
+        background-image:linear-gradient(#6ECBEC,#5EA5EF);
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       nav{
+        width: 100%;
+        height: 60px;
+       }
+       li{
+        list-style-type: none;
+        display:inline;
+        color: white;
+        margin-left: 30px;
+        position:relative;
+        top: 20px;
+        font-weight: bold;
+        font-size: larger;
+        cursor: pointer;
+       }
+       li:hover{
+        color:darkslateblue;
+       }
+       nav h1{
+        color: white;
+        position:absolute;
+        right: 100px;
+        top: 14px;
+        font-size: 30px;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        font-weight:bold;
+       }
+       .content{
+        width: 100%;
+        height: 595px;
+        border-top: 4px dotted white;
+        border-bottom: 4px dotted white;
+        display:flex;
+       }
+       .left{
+        width: 50%;
+        height: 595px;
+        color:white;
+       }
+       h2{
+        margin: 30px 0 25px 15px;
+       }
+       .left p{
+        text-align: justify;
+        margin: 20px 25px 15px;
+       }
+       .link{
+        width: 100%;
+        display:flex;
+        margin-top: 20px;
+       }
+       .label{
+        width:40%;
+        height: 448px;
+        margin-left: 70px;
+       }
+       .form{
+        width:60%;
+       }
+       input, select, textarea{
+        margin-bottom: 20px;
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid blue;
+        height: 20px;
+       }
+       textarea{
+        height: 120px;
+       }
+       button{
+        height: 30px;
+        width: 60px;
+        border: 2px dotted blue;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+       .right{
+        width: 50%;
+        height: 595px;
+       }
+       .right img{
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+       }
+       .right h2{
+        font-size: 35px;
+        color:blue;
+        text-shadow: 5px 5px 1px blue;
+        margin-left: 60px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+       }
+       .right p{
+        color:blue;
+        margin-left: 80px;
+        font-weight:800;
+       }
+       footer{
+        margin-top: 13px;
+        width:100%;
+        height: 80px;
+        color: white;
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Services</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+            <h1> Sky World </h1>
+        </nav>
+        <div class="content">
+            <div class="left">
+                <h2> Registration Information </h2>
+                <p> Start your travel planning now with our on-line tour regstration
+                    form. Just tell us a little about yourself and your group and one of our travel
+                    experts will contact  you  to create the perfect custom built for your group's needs .
+                </p>
+                <div class="link">
+                    <div class="label">
+                        <label for="Tilte">  Tilte  </label><br><br>
+                        <label for="Name">  Full Name  </label><br><br>
+                        <label for="Mailing Address">  Mailing Address  </label><br><br>
+                        <label for="City"> City  </label><br><br>
+                        <label for="Country">  Country </label><br><br>
+                        <label for="Specific">  Specific question or <br> requests about your tour  </label><br><br>
+                    </div>
+                    <div class="form">
+                        <form action="" method="post" >
+                            <select name="Tilte" id="">
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                            </select> <br>
+                            <input type="text" name="Full Name" placeholder="First Name"><br>
+                            <input type="email" name="Email" placeholder="Mailing Address"><br>
+                            <input type="text" name="City" placeholder="City"><br>
+                            <input type="text" name="Country" placeholder="Country"><br>
+                            <textarea type="text" name="Specific" placeholder="Specific question or requests about your tour"> </textarea><br>
+                            <button type="Submit" class="chon"> Submit </button>
+                            <button type="Reset" class="chon"> Reset </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="/BT_Tuan3/img/sky.png">
+                <h2> Your've arrived. </h2>
+                <p> Journeys as great as the destinations. </p>
+            </div>
+        </div>
+        <footer>
+            2016 Sky World Tours. All rights reserved.<br>
+COntact information: Student Name | StudentID | Testing Date
+        </footer>
+    </div>
+</body>
+</html>
