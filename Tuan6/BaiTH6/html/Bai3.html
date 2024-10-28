@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid w-25 mx-auto mt-5 pt-3 row">
+      <img
+        src="../img/b1.jpg"
+        id="pic"
+        class="img-fluid mx-auto mx-auto col-12 mb-3"
+        alt=""
+      />
+      <a
+        name=""
+        id=""
+        class="btn btn-success col mx-3"
+        href="#"
+        role="button"
+        onclick="start()"
+        >Start</a
+      >
+      <a
+        name=""
+        id=""
+        class="btn btn-secondary col mx-3"
+        href="#"
+        role="button"
+        onclick="stop()"
+        >Stop</a
+      >
+    </div>
+    <script>
+      var imgs = [
+        "../img/b1.jpg",
+        "../img/b2.jpg",
+        "../img/b3.jpg",
+        "../img/b4.jpg",
+        "../img/b5.jpg",
+        "../img/b6.jpg",
+        "../img/b7.jpg",
+        "../img/b8.jpg",
+        "../img/b9.jpg",
+        "../img/b10.jpg",
+      ];
+      var pic = document.getElementById("pic");
+      var i = 0;
+      var time;
+
+      function start() {
+        pic.src = imgs[i];
+        i++;
+        if (i === imgs.length) {
+          i = 0;
+        }
+        time = setTimeout(start, 1000);
+      }
+      function stop() {
+        clearTimeout(time);
+      }
+    </script>
+  </body>
+</html>

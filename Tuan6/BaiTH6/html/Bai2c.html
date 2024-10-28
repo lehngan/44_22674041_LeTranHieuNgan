@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="form" class="container-fluid w-50 mx-auto mt-5 pt-3">
+      <h1>Chọn loại caffee:</h1>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="Trung Nguyen"
+          id="Trung_Nguyen"
+        />
+        <label class="form-check-label" for=""> Trung Nguyen </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="Me Kong"
+          id="Me_Kong"
+        />
+        <label class="form-check-label" for=""> Me Kong </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="New Life"
+          id="New_Life"
+        />
+        <label class="form-check-label" for=""> New Life </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="Ocean Blue"
+          id="Ocean_Blue"
+        />
+        <label class="form-check-label" for=""> Ocean Blue </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="Blue Space"
+          id="Blue_Space"
+        />
+        <label class="form-check-label" for=""> Blue Space </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="Windows"
+          id="Windows"
+        />
+        <label class="form-check-label" for=""> Windows </label>
+      </div>
+
+      <a name="" id="chon" onclick="chon()" class="btn btn-success" href="#" role="button">Chọn</a>
+
+      <br />
+      <div class="row">
+        <div class="col-3">Bạn chọn cafe:</div>
+        <div class="col text-danger" id="cf"></div>
+      </div>
+    </div>
+    <script>
+      function chon() {
+        var form = document.getElementById("form");
+        var checkboxes = form.querySelectorAll("input[type='checkbox']");
+        var cf = document.getElementById("cf");
+        var list=[];
+
+        checkboxes.forEach((checkbox) => {
+          if(checkbox.checked){
+            list.push(checkbox.value);
+          }
+        });
+        cf.textContent = ""+ list.join(", ");
+
+      }
+    </script>
+  </body>
+</html>

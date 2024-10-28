@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <script src="../../js/jquery-3.7.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container w-50 mt-5 border border-3 pt-3">
+      <form>
+        <div class="mb-3 row">
+          <h1 class="col-12 text-success">ĐĂNG KÝ</h1>
+          <label for="inputName" class="col-4 col-form-label"
+            >Tên đăng nhập</label
+          >
+          <div class="col-8">
+            <input
+              type="text"
+              class="form-control"
+              name="inputName"
+              id="inputName"
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="inputPass" class="col-4 col-form-label">Mật khẩu</label>
+          <div class="col-8">
+            <input
+              type="password"
+              class="form-control"
+              name="inputPass"
+              id="inputPass"
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="offset-sm-4 col-sm-8">
+            <button
+              id="dk"
+              type="submit"
+              class="btn btn-primary"
+              onclick="dangky()"
+            >
+              Đăng ký
+            </button>
+            <a
+              name=""
+              id=""
+              class="btn btn-success"
+              href="../../html/Bai2a/Bai2_dn.html"
+              role="button"
+              >Sang trang đăng nhập</a
+            >
+            
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      function dangky() {
+      var name = document.getElementById("inputName").value;
+      var pass = document.getElementById("inputPass").value;
+      localStorage.setItem("sharename", name);
+      localStorage.setItem("sharepass", pass);
+        alert("Đăng ký thành công !!!");
+      }
+    </script>
+  </body>
+</html>

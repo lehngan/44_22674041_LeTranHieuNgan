@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        table{
+            border: solid 2px black;
+        }
+        tr,td{
+            background-color: cyan;
+        }
+    </style>
+</head>
+  <body>
+    <div class="container-fluid w-50 mt-5">
+      <div class="table-responsive">
+        <table id="table" class="table">
+          <tr>
+            <th class="text-center fw-bold fs-2" colspan="3" scope="col">
+              DANH SÁCH SINH VIÊN
+            </th>
+          </tr>
+          <tr>
+            <td class="fw-bold">Mã số sinh viên</td>
+            <td class="fw-bold">Họ và tên</td>
+            <td class="fw-bold">Lớp</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+      var Id = prompt("Nhập mã số sinh viên của bạn:", "");
+      var Name = prompt("Nhập tên của bạn:", "");
+      var Class = prompt("Nhập lớp của bạn:", "");
+      
+      var Table = document.getElementById("table");
+      var newRow =  document.createElement("tr");
+      var td1 = document.createElement("td");
+      var td2 = document.createElement("td");
+      var td3 = document.createElement("td");
+      td1.textContent = Id;
+      td2.textContent = Name;
+      td3.textContent = Class;
+      newRow.append(td1);
+      newRow.append(td2);
+      newRow.append(td3);
+
+      Table.append(newRow);
+    </script>
+  </body>
+</html>

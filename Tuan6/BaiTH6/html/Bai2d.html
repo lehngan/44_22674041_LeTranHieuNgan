@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid w-50 mx-auto mt-5 pt-3 border border-3">
+      <h1 class="text-center text-success">FORM ĐỊNH DẠNG</h1>
+      <div class="mb-3 d-flex row">
+        <label for="" class="form-label col-2">Name</label>
+        <input
+          type="text"
+          class="col form-control"
+          name=""
+          id="txt"
+          aria-describedby="helpId"
+          placeholder=""
+        />
+      </div>
+      <div class="mb-3 row">
+        <p class="col">Chọn:</p>
+        <div class="form-check col">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="a"
+            id="Background"
+          />
+          <label class="form-check-label" for="">Background</label>
+        </div>
+        <div class="form-check col">
+          <input class="form-check-input" type="radio" name="a" id="Font" />
+          <label class="form-check-label" for="">Font</label>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="" class="col-2 form-label my-auto">City</label>
+        <select class="col form-select" name="" id="color">
+          <option value="RED">RED</option>
+          <option value="YELLOW">YELLOW</option>
+          <option value="BLUE">BLUE</option>
+        </select>
+      </div>
+      <div class="mb-3 row">
+        <a
+          name=""
+          id=""
+          class="btn btn-success col mx-5"
+          href="#"
+          role="button"
+          onclick="start()"
+          >Đổi màu</a
+        >
+        <button
+          name=""
+          id="Close"
+          class="btn btn-secondary col mx-5"
+          href="#"
+          onclick="closeForm()"
+        >
+          Đóng
+        </button>
+      </div>
+      <div class="mb-3 w-100 p-3" style="height: 50px" id="kq"></div>
+    </div>
+    <script>
+      function closeForm() {
+        var text = document.getElementById("txt").value;
+        var kq = document.getElementById("kq");
+
+        kq.classList.remove("bg-warning");
+        kq.classList.remove("text-warning");
+        kq.classList.remove("bg-primary");
+        kq.classList.remove("text-primary");
+        kq.classList.remove("bg-danger");
+        kq.classList.remove("text-danger");
+        kq.textContent = "";
+
+        document.getElementById("Background").checked = false;
+        document.getElementById("Font").checked = false;
+      }
+
+      function start() {
+        var text = document.getElementById("txt").value;
+        var Background = document.getElementById("Background");
+        var Font = document.getElementById("Font");
+        var Color = document.getElementById("color");
+        var kq = document.getElementById("kq");
+
+        if (Background.checked) {
+          closeForm();
+          if (Color.value == "RED") {
+            kq.classList.add("bg-danger");
+            kq.textContent = text;
+          }
+          if (Color.value == "YELLOW") {
+            kq.classList.add("bg-warning");
+            kq.textContent = text;
+          }
+          if (Color.value == "BLUE") {
+            kq.classList.add("bg-primary");
+            kq.textContent = text;
+          }
+        }
+        if (Font.checked) {
+          closeForm();
+          if (Color.value == "RED") {
+            kq.classList.add("text-danger");
+            kq.textContent = text;
+          }
+          if (Color.value == "YELLOW") {
+            kq.classList.add("text-warning");
+            kq.textContent = text;
+          }
+          if (Color.value == "BLUE") {
+            kq.classList.add("text-primary");
+            kq.textContent = text;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
