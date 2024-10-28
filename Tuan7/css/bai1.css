@@ -1,0 +1,16 @@
+
+#thumbnails {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+img {
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+}
+
+#thumbnails::-webkit-scrollbar {
+    display: none;
+}

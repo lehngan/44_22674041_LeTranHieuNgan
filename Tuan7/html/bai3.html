@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            background-color: aquamarine;
+        }
+        
+        td {
+            border: 1px solid black;
+        }
+        
+        .a {
+            width: 40%;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../js/bai3.js"></script>
+    <div class="container">
+        <h2>Register Form</h2>
+        <table>
+            <tr>
+                <td class="a">Họ và tên(*):</td>
+                <td>
+                    <input type="text" name="" id="hoTen">
+                    <span id="tbHoTen"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Tên đăng nhập(*):</td>
+                <td>
+                    <input type="text" name="" id="dangNhap">
+                    <span id="tbDangNhap"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Mật khẩu(*):</td>
+                <td>
+                    <input type="text" name="" id="matKhau">
+                    <span id="tbMatKhau"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Xác nhận mật khẩu(*):</td>
+                <td>
+                    <input type="text" name="" id="xacNhan">
+                    <span id="tbXacNhan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Ngày sinh:</td>
+                <td>
+                    <input type="date" name="" id="ngaySinh">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Điện thoại:</td>
+                <td>
+                    <input type="text" name="" id="soDienThoai">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Địa chỉ:</td>
+                <td>
+                    <input type="text" name="" id="diaChi">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Email khác:</td>
+                <td>
+                    <input type="text" name="" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td class="a">Sở thích:</td>
+                <td>
+                    <select name="" id="soThich">
+                        <option value="Ca Nhạc">Ca nhạc</option>
+                        <option value="Mỹ Thuật">Mỹ thuật</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="dangKy" type="button">Đăng ký</button>
+                    <button id="huy" type="button">Hủy</button>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <h1>Thông tin bạn đã đăng kí</h1>
+            Họ và tên: <span id="outHoTen"></span><br> Tên đăng nhập: <span id="outTenDangNhap"></span><br> Mật khẩu: <span id="outMatKhau"></span><br> Ngày sinh: <span id="outNgaySinh"></span><br> Điện thoại: <span id="outDienThoai"></span><br> Địa chỉ:
+            <span id="outDiaChi"></span><br> Email: <span id="outEmail"></span><br> Sở thích: <span id="outSoThich"></span><br>
+        </div>
+    </div>
+</body>
+
+</html>

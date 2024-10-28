@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-fluid mb-1">
+            <img class="w-100" src="../IMAGE/banner_car.jpg" alt="">
+        </div>
+        <div class="container-fluid">
+            <div id="content1" class="text-center row m-0 p-0">
+                <div class="col-lg-4 col-12 p-0 m-0">
+                    <table class="table m-0 p-0 table-bordered border border-3">
+                        <tr>
+                            <th class="p-0" colspan="2">Bảng tin thị trường</th>
+                        </tr>
+                        <tr>
+                            <td class="p-0" colspan="2">Vàng</td>
+                        </tr>
+                        <tr>
+                            <td class="p-0">Mua vào</td>
+                            <td class="p-0">Bán ra</td>
+                        </tr>
+                        <tr>
+                            <td class="p-0">
+                                <label for="" id="vmuavao"></label>
+                            </td>
+                            <td class="p-0">
+                                <label for="" id="vbanra"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-0" colspan="2">
+                                USD
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-0">Mua vào</td>
+                            <td class="p-0">Bán ra</td>
+                        </tr>
+                        <tr>
+                            <td class="p-0">
+                                <label for="" id="umuavao"></label>
+                            </td>
+                            <td class="p-0">
+                                <label for="" id="ubanra"></label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-4 col-12 p-0 m-0">
+                    <table class="table table-bordered border border-3 border-white table-secondary text-start p-0">
+                        <tr>
+                            <th class="p-0" colspan="2">Cập nhật giá thị trường</th>
+                        </tr>
+                        <tr>
+                            <td class="p-0">Mua vào</td>
+                            <td class="p-0">
+                                <input class="m-0 p-0" type="text" name="" id="muavaoip" onkeyup="cau2();cau4a()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-0">Bán ra</td>
+                            <td class="p-0">
+                                <input class="m-0 p-0" type="text" name="" id="banraip" onkeyup="cau4a()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-0">Loại xe</td>
+                            <td class="p-0">
+                                <select class="p-0" name="" id="chonAnh" onchange="cau3()">
+                                    <option value="../img/car1.jpg">Toyota</option>
+                                    <option value="../img/car2.jpg">KIA</option>
+                                    <option value="../img/car3.jpg">Ford</option>
+                                    <option value="../img/car4.jpg">Civic</option>
+                                    <option value="../img/car5.jpg">Ferrari</option>
+                                    <option value="../img/car6.jpg">Mercedes</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-0"></td>
+                            <td class="p-0">
+                                <input type="radio" name="rd" id="" value="Vàng" onclick="cau4a()">
+                                <label for="">Vàng</label>
+                                <input type="radio" name="rd" id="" value="USD" onclick="cau4a()">
+                                <label for="">USD</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-0"></td>
+                            <td class="p-0">
+                                <input type="button" name="" id="update" disabled value="Update" onclick="cau4b()">
+                                <input type="button" name="" id="state" disabled value="State">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-4 col-12 p-0 m-0">
+                    <table class="table table-bordered border border-3">
+                        <tr>
+                            <th>Bảng báo giá</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul class="list-unstyled text-start align-items-center">
+                                    <li>- Với kiểu dáng thể thao, sang trọng</li>
+                                    <li>- Nổi bật, ít tốn nhiên liệu</li>
+                                    <li>- Kiểu dáng thể thao</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img id="showAnh" src="../img/car1.jpg" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Giá: 35000 USD</label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function cau1() {
+            var muavao = document.getElementById("muavaoip").focus();
+        }
+
+        document.getElementById("muavaoip").addEventListener("DOMContentLoaded", cau1());
+
+        function cau2() {
+            var muavao = document.getElementById("muavaoip");
+            var state = document.getElementById("state");
+            if (muavao.value.trim() != "" && !isNaN(muavao.value.trim())) {
+                // state.removeAttribute("disabled");
+                state.disabled = false;
+            } else {
+                // state.setAttribute("disabled","");
+                state.disabled = true;
+            }
+        }
+
+        function cau3() {
+            var chonAnh = document.getElementById("chonAnh");
+            var showAnh = document.getElementById("showAnh");
+            showAnh.src = chonAnh.value;
+        }
+
+        function cau4a() {
+            var state = document.getElementById("state");
+            var banra = document.getElementById("banraip");
+            var radiusValue = document.querySelector('input[name="rd"]:checked').value;
+            var update = document.getElementById("update");
+            if (radiusValue != null) {
+                if (!state.disabled && banra.value.trim() != "" && !isNaN(banra.value.trim())) {
+                    update.disabled = false;
+                } else {
+                    update.disabled = true;
+                }
+            } else {
+                update.disabled = true;
+            }
+        }
+
+        function cau4b() {
+            var vmuavao = document.getElementById("vmuavao");
+            var vbanra = document.getElementById("vbanra");
+            var umuavao = document.getElementById("umuavao");
+            var ubanra = document.getElementById("ubanra");
+            var muavao = document.getElementById("muavaoip");
+            var banra = document.getElementById("banraip");
+            var radiusValue = document.querySelector('input[name="rd"]:checked').value;
+            if (radiusValue == "Vàng") {
+                vmuavao.innerText = muavao.value;
+                vbanra.innerText = banra.value;
+                umuavao.innerText = "";
+                ubanra.innerText = "";
+            } else {
+                vmuavao.innerText = "";
+                vbanra.innerText = "";
+                umuavao.innerText = muavao.value;
+                ubanra.innerText = banra.value;
+            }
+        }
+    </script>
+</body>
+
+</html>
