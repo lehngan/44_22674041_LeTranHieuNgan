@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin người dùng</title>
+</head>
+
+<body>
+    <h1>Thông tin đăng nhập</h1>
+    <table border="1" width="400">
+        <tr>
+            <th colspan="2">Thông tin</th>
+        </tr>
+        <tr>
+            <td>User Name</td>
+            <td id="us"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td id="pw"></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td id="gen"></td>
+        </tr>
+        <tr>
+            <td>Café bạn chọn</td>
+            <td id="cf"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Lấy dữ liệu từ localStorage
+        document.getElementById("us").innerHTML = localStorage.getItem("us");
+        document.getElementById("pw").innerHTML = localStorage.getItem("pd");
+        document.getElementById("gen").innerHTML = localStorage.getItem("gt");
+        document.getElementById("cf").innerHTML = localStorage.getItem("cf");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng nhập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            padding-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgb(240, 223, 223);
+        }
+        
+        #txtus {
+            margin-bottom: 10px;
+        }
+        
+        #txtmk {
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin-left: 30px;
+            color: rgb(156, 8, 37);
+        }
+        
+        #nhap {
+            margin-left: 80px;
+            padding: 5px;
+        }
+    </style>
+
+    <script>
+        function Nhap() {
+            var tendn = document.getElementById("txtus").value;
+            var mk = document.getElementById("txtmk").value;
+
+
+            var cafe = [];
+            var taphop = document.querySelectorAll("input[type='checkbox']");
+            taphop.forEach(function(chk) {
+                if (chk.checked) cafe.push(chk.value);
+            });
+
+            var gtinh;
+            var taphopgt = document.querySelectorAll("input[name='gt']");
+            taphopgt.forEach(function(ra) {
+                if (ra.checked) gtinh = ra.value;
+            });
+
+            localStorage.setItem("us", tendn);
+            localStorage.setItem("pd", mk);
+            localStorage.setItem("cf", cafe);
+            localStorage.setItem("gt", gtinh);
+
+            window.open("info.html");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1> Đăng Ký Ngay </h1>
+        <form action="">
+            <input type="text" id="txtus" placeholder="User name">
+            <input type="password" id="txtmk" placeholder="Password">
+            <br>
+            <label>Giới tính:</label>
+            <input type="radio" name="gt" value="Nam">Nam
+            <input type="radio" name="gt" value="Nữ">Nữ
+            <br>
+            <br>
+            <label>Café bạn thích:</label>
+            <br>
+            <input type="checkbox" value="Trung Nguyen">
+            <p>Trung Nguyen</p>
+            <br>
+            <input type="checkbox" value="MeKong">
+            <p>MeKong</p>
+            <br>
+            <input type="checkbox" value="New Blue">
+            <p>New Blue </p>
+            <br>
+            <input type="checkbox" value="Trà sữa">
+            <p>Trà sữa</p>
+            <br>
+        </form>
+
+
+        <input type="button" value="Nhập" onclick="Nhap()" id="nhap">
+
+    </div>
+
+</body>
+
+</html>
