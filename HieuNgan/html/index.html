@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    .wrapper {
+        width: 789px;
+        height: 500px;
+    }
+</style>
+<script>
+    function Nhap() {
+        var tendn, mk;
+        tendn = document.getElementById("txtus").value;
+        mk = document.getElementById("txtmk").value;
+        // checkbox: lưu giá trị vào mảng Array()
+        var cafe = new Array();
+        var taphop = document.querySelectorAll("input[type='checkbox']"); //
+        taphop.forEach(function(chk) {
+            if (chk.checked)
+                cafe.push(chk.value); //
+        });
+        // radio: lưu 1 giá trị
+        var gtinh;
+        var taphopgt = document.querySelectorAll("input[type='radio']"); //
+        taphopgt.forEach(function(ra) {
+            if (ra.checked)
+                gtinh = ra.value; //
+        });
+        // alert(tendn);
+        // xử lý tendn, mk: bỏ qua
+        var w = window.open("info.html");
+        // lưu dữ liệu set: ghi vào
+        localStorage.setItem("us", tendn);
+        localStorage.setItem("pd", mk);
+        localStorage.setItem("cf", cafe);
+        localStorage.setItem("gt", gtinh);
+    }
+</script>
+
+
+<body>
+    <div class="wrapper">
+        <form>
+            <input type="text" id="txtus" placeholder="User name">
+            <br>
+            <input type="password" id="txtmk" placeholder="Password">
+            <br>
+            <input type="radio" name="gt" value="Nam">Nam
+            <input type="radio" name="gt" value="Nữ">Nữ
+            <br>
+            <input type="checkbox" value="Trung Nguyen">Trung Nguyen
+            <br>
+            <input type="checkbox" value="MeKong"> MeKong
+            <input type="checkbox" value="New Blue"> New Blue
+            <br>
+            <input type="checkbox" value="Trà sữa"> Trà sữa
+            <br>
+            <input type="button" value="Nhập" onclick="Nhap()">
+            <br>
+        </form>
+</body>
+
+</html>

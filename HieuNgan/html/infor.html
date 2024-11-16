@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Infor</h1>
+    <table width=200 border="1">
+        <tr>
+            <th colspan="2">THÔNG TIN ĐĂNG NHẬP</th>
+        </tr>
+        <tr>
+            <td>User Name </td>
+            <td id="us">AAAA</td>
+        </tr>
+        <tr>
+            <td>Password </td>
+            <td id="pw">BBBB</td>
+        </tr>
+        <tr>
+            <td>Giới tính </td>
+            <td id="gen">DDDD</td>
+        </tr>
+        <tr>
+            <td>Cafe bạn chọn </td>
+            <td id="cf">CCCC</td>
+        </tr>
+    </table>
+</body>
+<script>
+    // lấy dữ liệu đã lưu get: lấy ra info.html
+    var gt1, gt2;
+    gt1 = localStorage.getItem("us");
+    gt2 = localStorage.getItem("pd");
+    gt3 = localStorage.getItem("cf");
+    gt4 = localStorage.getItem("gt");
+
+    document.getElementById("us").innerHTML = gt1;
+    document.getElementById("pw").innerHTML = gt2;
+    document.getElementById("cf").innerHTML = gt3;
+    document.getElementById("gen").innerHTML = gt4;
+</script>
+
+</html>
